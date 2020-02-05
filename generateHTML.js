@@ -236,7 +236,7 @@ function generateHTML(data) {
     </html>`
         }
 
-module.exports = generateHTML
+module.exports = generateHTML;
 
 // RESPONSE EXAMPLE
 

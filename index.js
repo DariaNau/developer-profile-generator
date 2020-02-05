@@ -105,7 +105,6 @@ async function init() {
 // function init() {}
 // init();
 
-
 // function writeFileAsync(){
 //   return new Promise(function(resolve, reject){
 //     fs.writeFile("./dummy.txt", "Hello!", function(err) {
