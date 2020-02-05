@@ -174,57 +174,66 @@ function generateHTML(data) {
       </style>
 
       <body>
-      <main>
-      <div class="wrapper">
 
+      <div class="wrapper">
+  
         <div class="photo-header">
           <img src="${data.avatar_url}" alt="">
           <h1> Hi!</h1>
           <h1> My name is ${data.name}!</h1>
           <h2>Currently @ ${data.company}</h2>
-         
+  
           <div class="links-nav">
             <ul>
-              <li class="nav-link"><h6>${data.location}</h6></li>
-              <li class="nav-link"><h6>${data.html_url}</h6></li>
-              <li class="nav-link"><h6>${data.blog}</h6></li>
+              <li class="nav-link">
+                <h6>${data.location}</h6>
+              </li>
+              <li class="nav-link">
+                <h6>${data.html_url}</h6>
+              </li>
+              <li class="nav-link">
+                <h6>${data.blog}</h6>
+              </li>
             </ul>
           </div>
-           </div>
+        </div>
   
-           <div class="container">
-           <h3 style="text-align: center; margin-top: 30px;">${data.bio}</h3>
-             <div class="row">
-                 <div class="col">
-                  <div class="card">
-                    <a href="${data.repos_url}">
-                  <h3>Public Repositories</h3>
-                  <h4>${data.public_repos}</h4>
+        <main>
+  
+          <div class="container">
+            <h3 style="text-align: center; margin-top: 30px;">${data.bio}</h3>
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <a href="${data.repos_url}">
+                    <h3>Public Repositories</h3>
+                    <h4>${data.public_repos}</h4>
                   </a>
-                  </div>
-                  <div class="card">
-                  <a href="${data.starred_url}">
-                  <h3>GitHub Stars</h3>
-                  <h4>${data.starred_url}</h4>
-                  </a>
-                  </div>
                 </div>
+                <div class="card">
+                  <a href="${data.starred_url}">
+                    <h3>GitHub Stars</h3>
+                    <h4>${data.starred_url}</h4>
+                  </a>
+                </div>
+              </div>
   
-                <div class="col">
-                  <div class="card">
+              <div class="col">
+                <div class="card">
                   <h3>Followers</h3>
                   <h4>${data.followers}</h4>
-                  </div>
-                  <div class="card">
+                </div>
+                <div class="card">
                   <h3>Following</h3>
                   <h4>${data.following}</h4>
-                  </div>
-                 </div>
                 </div>
-        </div>
-      </main>
+              </div>
+            </div>
+          </div>
+        </main>
     </body>
-  </html>`
+  
+    </html>`
         }
 
 module.exports = generateHTML

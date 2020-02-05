@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const axios = require("axios");
 const fs = require("fs");
 const pdf = require('html-pdf')
+fuck!
 
 const generateHTML = require("./generateHTML");
 
@@ -60,7 +61,7 @@ function firstCall() {
 //     console.log(error);
 //   });
 
- init()
+ init();
 
 async function init() {
   try {
