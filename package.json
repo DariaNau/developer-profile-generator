@@ -1,0 +1,25 @@
+{
+  "name": "developer-profile-generator",
+  "version": "1.0.0",
+  "description": "introduction to node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DariaNau/developer-profile-generator.git"
+  },
+  "author": "Daria N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DariaNau/developer-profile-generator/issues"
+  },
+  "homepage": "https://github.com/DariaNau/developer-profile-generator#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "html-pdf": "^2.2.0",
+    "inquirer": "^7.0.4",
+    "util": "^0.12.1"
+  }
+}
