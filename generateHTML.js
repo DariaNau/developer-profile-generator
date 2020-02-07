@@ -211,9 +211,9 @@ function generateHTML(data) {
                   </a>
                 </div>
                 <div class="card">
-                  <a href="${data.starred_url}">
+                  <a href="">
                     <h3>GitHub Stars</h3>
-                    <h4>${data.starred_url}</h4>
+                    <h4>${data.stars}</h4>
                   </a>
                 </div>
               </div>
