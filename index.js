@@ -25,20 +25,17 @@ const questions = [
 function firstCall() {
   return new Promise(function(resolve, reject) {
     inquirer.prompt(questions).then(async function(answers) {
-      
       //questions.username & questions.color
       const { username, color } = answers;
-      
-      
       const queryUrl = `https://api.github.com/users/${username}`;
       try {
-        const response = await axios.get(queryUrl);
-        // console.log(answers.username);
+        const response = await axios.get(queryUrl); 
+        const stars = await secondCall(username);
         resolve({
           ...response.data,
-          color
+          color,
+          stars
         });
-        secondCall(answers.username);
       } catch (error) {
         reject(error);
       }
@@ -57,14 +54,25 @@ function firstCall() {
   });
 }
 
+
+// firstCall().then((username) => {
+//   const queryUrl2 = `https://api.github.com/users/${username}/starred`;
+//      axios
+//     .get(queryUrl2)
+//     .then(function(res) {
+//       const repos = res.data.length;
+//       console.log(repos);
+//       return repos;
+//     });
+// });
+
 function secondCall(username){
-  
   const queryUrl2 = `https://api.github.com/users/${username}/starred`;
-   axios
+  return axios
   .get(queryUrl2)
   .then(function(res) {
     const repos = res.data.length;
-    // console.log(repos);
+    console.log(repos);
     return repos;
   });
   }
@@ -81,20 +89,18 @@ function secondCall(username){
 
 init();
 
-async function init() {
+async function init(repos) {
   try {
     const data = await firstCall();
-    const allStars = secondCall();
-    // const stars = allStars.length;
-    console.log(allStars)
-    const totalData = {...data, allStars};
-    const html = generateHTML(totalData);
-    await writeFileAsync('./profile.html', html)
+    // let stars = repos;
+    console.log(data)
+    // const allData = {...data}
+    const html = generateHTML(data);
+    await writeFileAsync('./profile.html', html);
     pdf.create(html).toFile('./profile.pdf', function(err, res){
       if(err) throw err;
-      // console.log(res)
+      console.log(res)
     })
-    // console.log(html);
   } catch (error) {
     console.log(error);
   }

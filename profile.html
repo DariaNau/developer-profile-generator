@@ -185,7 +185,17 @@
                 <div class="card">
                   <a href="">
                     <h3>GitHub Stars</h3>
-                    <h4>undefined</h4>
+                    <h4>function secondCall(username){
+  
+  const queryUrl2 = `https://api.github.com/users/${username}/starred`;
+   axios
+  .get(queryUrl2)
+  .then(function(res) {
+    const repos = res.data.length;
+    console.log(repos);
+    return repos;
+  });
+  }</h4>
                   </a>
                 </div>
               </div>
