@@ -5,19 +5,6 @@
 A command-line application that dynamically generates a PDF profile from a GitHub username. The application will be invoked with the following command:
 node index.js. The user will be prompted for a favorite color, which will be used as the background color to style created portfolio.html and portfolio.pdf.
 
-## The PDF will be populated with the following:
-
-- Profile image
-- User name
-- User location via Google Maps
-- User GitHub profile
-- User blog
-- User bio
-- Number of public repositories
-- Number of followers
-- Number of GitHub stars
-- Number of users following
-
 ##  Business Context
 
 Following the common templates for user stories, we can frame this challenge as follows:  
@@ -30,7 +17,22 @@ SO THAT I can easily prepare reports for stakeholders
 
 When preparing a report for stakeholders, it is important to have up-to-date information about members of the development team. Rather than navigating to each team member's GitHub profile, a command-line application will allow for quick and easy generation of profiles in PDF format.
 
+## Demo
+
 ![](developer-profile-generator.gif)
+
+## The PDF will be populates the following:
+
+- Profile image
+- User name
+- User location via Google Maps
+- User GitHub profile
+- User blog
+- User bio
+- Number of public repositories
+- Number of followers
+- Number of GitHub stars
+- Number of users following
 
 ##  NPM/API/Technologies Used
 
@@ -51,11 +53,7 @@ In order to create the content necessary for the pdf, information from github is
 
 https://developer.github.com/v3/users/#get-a-single-user - Users Endpoint
 
-Example GET url: https://api.github.com/users/jsatlien
-
 https://developer.github.com/v3/repos/ - Repos Endpoint
-
-Example GET url: https://api.github.com/users/jsatlien/repos
 
 ### Axios
 
