@@ -72,7 +72,7 @@ function secondCall(username){
   .get(queryUrl2)
   .then(function(res) {
     const repos = res.data.length;
-    console.log(repos);
+    // console.log(repos);
     return repos;
   });
   }
@@ -93,7 +93,7 @@ async function init(repos) {
   try {
     const data = await firstCall();
     // let stars = repos;
-    console.log(data)
+    // console.log(data)
     // const allData = {...data}
     const html = generateHTML(data);
     await writeFileAsync('./profile.html', html);

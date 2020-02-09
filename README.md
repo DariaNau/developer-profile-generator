@@ -30,6 +30,8 @@ SO THAT I can easily prepare reports for stakeholders
 
 When preparing a report for stakeholders, it is important to have up-to-date information about members of the development team. Rather than navigating to each team member's GitHub profile, a command-line application will allow for quick and easy generation of profiles in PDF format.
 
+![](developer-profile-generator.gif)
+
 ##  NPM/API/Technologies Used
 
 ### Inquirer npm
@@ -57,4 +59,4 @@ Example GET url: https://api.github.com/users/jsatlien/repos
 
 ### Axios
 
-The ajax-like functionality of axios (https://www.npmjs.com/package/axios) is used to call these endpoints.
+The ajax-like functionality of axios (https://www.npmjs.com/package/axios) is used to call the endpoints.
